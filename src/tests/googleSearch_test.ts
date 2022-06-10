@@ -21,7 +21,7 @@ Data(IMAGE_INFO).TestCase("Testcase 01: Check Cart items displayed correctly", a
 
     gondola.report("Step 4: Take a screenshot");
     await ResultsPage.screenShotVistedResultPage();
-   //await gondola.wait(120)
+
     gondola.report("Verify Point: Make sure the search results are related image");
     let doesSearchResultsRelatedImage = await ResultsPage.doesSearchResultsRelatedImage(current.imageName);
     await gondola.checkEqual(doesSearchResultsRelatedImage, true);

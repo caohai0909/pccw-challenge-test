@@ -1,0 +1,185 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-06-10T02:34:57.695Z",
+    "end": "2022-06-10T02:35:33.011Z",
+    "duration": 35316,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "549f09a1-f8f4-4803-8307-39f59b00c539",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5183e936-fca6-412c-89f6-fa1b8984e747",
+          "title": "Google search by image",
+          "fullFile": "C:\\Users\\DELL\\Desktop\\pccw challenge\\pccw-challenge\\built\\tests\\googleSearch_test.js",
+          "file": "\\built\\tests\\googleSearch_test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook: codeceptjs.beforeSuite",
+              "fullTitle": "Google search by image \"before all\" hook: codeceptjs.beforeSuite",
+              "timedOut": false,
+              "duration": 15964,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.suiteSetup(suite)",
+              "err": {},
+              "uuid": "0518148c-3582-4a77-a852-dd68e85069a0",
+              "parentUUID": "5183e936-fca6-412c-89f6-fa1b8984e747",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"before each\" hook: codeceptjs.before",
+              "fullTitle": "Google search by image \"before each\" hook: codeceptjs.before",
+              "timedOut": false,
+              "duration": 2201,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.setup(suite)",
+              "err": {},
+              "uuid": "16e6c1eb-7e61-4a47-88d2-5e5567446dee",
+              "parentUUID": "5183e936-fca6-412c-89f6-fa1b8984e747",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook: codeceptjs.afterSuite",
+              "fullTitle": "Google search by image \"after all\" hook: codeceptjs.afterSuite",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.suiteTeardown(suite)",
+              "err": {},
+              "uuid": "87291853-d94d-4177-8ebf-f07dcb270e60",
+              "parentUUID": "5183e936-fca6-412c-89f6-fa1b8984e747",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"after each\" hook: finalize codeceptjs",
+              "fullTitle": "Google search by image \"after each\" hook: finalize codeceptjs",
+              "timedOut": false,
+              "duration": 236,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.teardown(suite)",
+              "err": {},
+              "uuid": "c937d24d-34d0-4208-b8e7-ae25f523642e",
+              "parentUUID": "5183e936-fca6-412c-89f6-fa1b8984e747",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Testcase 01: Check Cart items displayed correctly | {\"imageName\":\"Rain\",\"description\":\"Rain\",\"imagePath\":\"\\\\src\\\\data\\\\images\\\\Rain.jpg\",\"visitResultIndex\":\"3\"}",
+              "fullTitle": "Google search by image: Testcase 01: Check Cart items displayed correctly | {\"imageName\":\"Rain\",\"description\":\"Rain\",\"imagePath\":\"\\\\src\\\\data\\\\images\\\\Rain.jpg\",\"visitResultIndex\":\"3\"}",
+              "timedOut": false,
+              "duration": 16835,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  \"Step 1: Go to google search by image page\",\n  \"Step 2: Search by image\",\n  \"Step 3: Visit to the result by index\",\n  \"Step 4: Take a screenshot\",\n  \"Verify Point: Make sure the search results are related image\",\n  \"Testcase_0_80f6a732-fd61-481b-8669-981c68dcaed2.failed.png\"\n]",
+              "code": "gondola_1.gondola.report(\"Step 1: Go to google search by image page\");\nawait gondola_1.gondola.navigate(constants_1.Constants.BASE_URL);\nawait gondola_1.gondola.maximize();\ngondola_1.gondola.report(\"Step 2: Search by image\");\nawait googleSearchPage_1.default.searchByImage(current.imagePath);\ngondola_1.gondola.report(\"Step 3: Visit to the result by index\");\nawait resultsPage_1.default.visitToResultPageByIndex(current.visitResultIndex);\ngondola_1.gondola.report(\"Step 4: Take a screenshot\");\nawait resultsPage_1.default.screenShotVistedResultPage();\n//await gondola.wait(120)\ngondola_1.gondola.report(\"Verify Point: Make sure the search results are related image\");\nlet doesSearchResultsRelatedImage = await resultsPage_1.default.doesSearchResultsRelatedImage(current.imageName);\nawait gondola_1.gondola.checkEqual(doesSearchResultsRelatedImage, true);",
+              "err": {
+                "message": "AssertionError: Expected values to be strictly deep-equal:\n\nfalse !== true\n",
+                "estack": "Expected values to be strictly deep-equal:\n\nfalse !== true\n\n\nScenario Steps:\n\n- gondola.checkEqual(false, true) at Test.<anonymous> (built\\tests\\googleSearch_test.js:26:29)\n- gondola.getTitle() at ResultsPage.doesSearchResultsRelatedImage (built\\pages\\resultsPage.js:27:45)\n- gondola.report(\"Verify Point: Make sure the search results are related image\") at Test.<anonymous> (built\\tests\\googleSearch_test.js:24:23)\n- gondola.saveScreenshot(\"ResultScreenShot_2022_5_10_9_35_30.png\", true) at ResultsPage.screenShotVistedResultPage (built\\pages\\resultsPage.js:24:33)\n- gondola.wait(5) at ResultsPage.screenShotVistedResultPage (built\\pages\\resultsPage.js:23:33)\n- gondola.report(\"Step 4: Take a screenshot\") at Test.<anonymous> (built\\tests\\googleSearch_test.js:21:23)\n- gondola.click(\"(//div//h3)[3]\") at ResultsPage.visitToResultPageByIndex (built\\pages\\resultsPage.js:20:33)\n- gondola.waitForElement(\"(//div//h3)[3]\", 30) at ResultsPage.visitToResultPageByIndex (built\\pages\\resultsPage.js:19:33)\n- gondola.report(\"Step 3: Visit to the result by index\") at Test.<anonymous> (built\\tests\\googleSearch_test.js:19:23)\n- gondola.attachFile(\"//input[@id='awyMjb']\", \"\\src\\data\\images\\Rain.jpg\") at GoogleSearchPage.searchByImage (built\\pages\\googleSearchPage.js:24:33)\n- gondola.waitForElement(\"//input[@id='awyMjb']\", 20) at GoogleSearchPage.searchByImage (built\\pages\\googleSearchPage.js:23:33)\n- gondola.click(\"//div[@id='dRSWfb']/div[@class='WHWWB']/a\") at GoogleSearchPage.searchByImage (built\\pages\\googleSearchPage.js:22:33)\n- gondola.waitForElement(\"//div[@id='dRSWfb']/div[@class='WHWWB']/a\", 20) at GoogleSearchPage.searchByImage (built\\pages\\googleSearchPage.js:21:33)\n- gondola.click(\"//span[@class='tdPRye']\") at GoogleSearchPage.searchByImage (built\\pages\\googleSearchPage.js:20:33)\n- gondola.waitForElement(\"//span[@class='tdPRye']\", 20) at GoogleSearchPage.searchByImage (built\\pages\\googleSearchPage.js:19:33)\n- gondola.report(\"Step 2: Search by image\") at Test.<anonymous> (built\\tests\\googleSearch_test.js:17:23)\n- gondola.maximize() at Test.<anonymous> (built\\tests\\googleSearch_test.js:16:29)\n- gondola.navigate(\"https://images.google.com/\") at Test.<anonymous> (built\\tests\\googleSearch_test.js:15:29)\n- gondola.report(\"Step 1: Go to google search by image page\") at Test.<anonymous> (built\\tests\\googleSearch_test.js:14:23)\n\n",
+                "diff": "- false\n+ true\n"
+              },
+              "uuid": "80f6a732-fd61-481b-8669-981c68dcaed2",
+              "parentUUID": "5183e936-fca6-412c-89f6-fa1b8984e747",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "80f6a732-fd61-481b-8669-981c68dcaed2"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 16835,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "6.2.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "gondola",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "results",
+        "inlineAssets": true,
+        "timestamp": "isoDateTime",
+        "reportFilename": "gondola",
+        "autoOpen": true,
+        "reportPageTitle": "Gondola Test Result"
+      },
+      "version": "5.1.0"
+    }
+  }
+}
