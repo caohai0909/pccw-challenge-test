@@ -1,0 +1,28 @@
+{
+    "name": "pccw-challenge",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "postinstall": "selenium-standalone install",
+        "start-seleniumserver": "selenium-standalone start",
+        "clean": "rimraf built",
+        "clean-dev": "./node_modules/.bin/tsc -b --clean --dev",
+        "compile": "npm run clean && tsc",
+        "parallel": "./node_modules/.bin/gondola run-multiple parallel --reporter mochawesome",
+        "test": "./node_modules/.bin/gondola run --steps --reporter mochawesome"
+    },
+    "author": "",
+    "license": "ISC",
+    "engines": {
+        "node": ">=10.19.0"
+    },
+    "dependencies": {
+        "@logigear/gondola": "latest",
+        "mochawesome": "6.2.1",
+        "rimraf": "3.0.2"
+    },
+    "devDependencies": {
+        "@wdio/selenium-standalone-service": "6.10.6"
+    }
+}
